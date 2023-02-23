@@ -21,5 +21,4 @@ public class Grade {
     @ManyToOne(optional = false)
     @JoinColumn(name = "homework_id", referencedColumnName = "id")
     private Homework homework;
-
 }

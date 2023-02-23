@@ -1,9 +1,9 @@
 package com.example.universitystartup.entity;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.util.List;
 
 @Entity
 @Table(name = "attachment_content")
@@ -15,6 +15,7 @@ public class AttachmentContent {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+
     @Column(name = "content")
     private byte[] content;
 

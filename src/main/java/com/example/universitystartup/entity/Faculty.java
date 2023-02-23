@@ -1,10 +1,16 @@
 package com.example.universitystartup.entity;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "faculty")
 public class Faculty {
@@ -12,9 +18,8 @@ public class Faculty {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id ;
-    @NotNull
+
     @Column(name = "name")
-    @Size(min = 3, max = 50)
     private String name;
 
     @JsonIgnore
