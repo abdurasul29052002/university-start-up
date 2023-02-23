@@ -1,11 +1,11 @@
 package com.example.universitystartup.entity;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.jetbrains.annotations.NotNull;
+
 import java.util.List;
 @Entity
 @Table(name = "group")
@@ -17,9 +17,8 @@ public class Group {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+
     @Column(name = "name")
-    @NotNull
-    @Size(min = 3, max = 50)
     private String name;
 
     @JsonIgnore
